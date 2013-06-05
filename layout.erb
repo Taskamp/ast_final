@@ -1,0 +1,51 @@
+@@layout
+<% title = @title% >
+<!doctype html>
+<html lang='en'>
+<head>
+  <title> <% title % > </title>
+	<meta charset="utf-8">
+	#<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header>
+		<h1></h1>
+		<nav>
+			<ul>
+				<li><a href="/" title="Homepage">Homepage</a></li>
+				<li><a href="/prologue" title="Prologue">Prologue</a></li>
+				<li><a href="/problem_analysis" title="Problem_analysis">Problem_analysis</a></li>
+				<li><a href="/acknowledgements" title="Acknowledgements">Acknowledgements</a></li>
+				<li><a href="/references" title="References">References</a></li>
+				<li><a href="/self_reflection" title="Self_reflection">Self_reflection</a></li>
+				<li><a href="/literature_review" title="Literature_review">Literature_review</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section>
+		<%= yield % >
+		<p>Text_one</p>
+	</section>
+</body>
+</html>
+@@home 
+<p> @title 
+Tessa Askamp, studentnumber First supervisor Jan Hein Hoogstad, second reader Esther Peren, word count XXXX, date June 15 2013 </p>
+
+@@prologue
+<p>@prologue</p>
+
+@@problem_analysis
+<p>story</p>
+
+@@acknowledgements
+<p>I would like to thank blabla and bla for making me dinner and supporting me mentally in the past few very tough months</p>
+
+@@references
+<p>all great theorists who helped me to further my thinking about my problems</p>
+
+@@self_reflection
+<p>self reflections and the cultural analyst</p>
+
+@@literature_review
+<p>blocks of theory - or perhaps I leave them out completely, I have to made up my mind yet</p>
