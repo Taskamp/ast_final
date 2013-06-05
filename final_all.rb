@@ -3,68 +3,40 @@
 require 'cucumber'
 require 'rspec'
 require 'spec_helper'
-#require 'sinatra'
+require 'sinatra'
 
 class Homepage
-  def initialize(output)
-    attr_accessor :homepage, :output
-    @output = Text_one.new
+  attr_accessor :homepage, :output
+    def initialize(output)
+    @output = output("Text_one")
+    puts @Text_one
     #Text_one contains the title, word count, personal information about me, such as my name and student number, and information about my (second) supervisor 
-end
-
-  def start(homepage)
-    #@output.homepage 'Welcome to this thesis'
-    #@output.homepage 'Personal information'
-    #@output.homepage 'Photo'
-  end
-end
-
-class Prologue
-  attr_reader :prologue
-    def output(prologue)
-    @prologue = Prologue.new
-    #the prologue is a story
     end
   end
 
-  def hyperlink
-  end
-end
-
-class Problem_Analysis
-  def puts(output)
-    output = Problem_Analysis.new
-    #Problem_Analysis is a story
-  end
-
-  def hyperlink(click)
-  attr_writer :click
-  end
-end
-
-class Literature_Review
-  def hyperlink
-  end
-
-  def puts
-  end
-end
-
-class Picuture
-  def puts(picture)
-    photo = Picture.new
+class Hyperlink
+  attr_accessor :prologue, :problem_analysis, :literature_review, :acknowledgements, :references, :self_reflection
+  def output(prologue, problem_analysis, literature_review, acknowledgement, references, self_reflection)
+    @prologue = Prologue.new
+    #to JH fyi: the prologue is the piece that you already read
+    @problem_analysis = Problem_Analysis.new
+    #the problem analysis is a story I wrote discussing one of the 'problem statements' of my thesis
+    @literature_review = Literature_Review.new
+    #the literature review discusses literature the story is inspired by
+    @acknowledgements = Acknowledgement.new
+    @references = References.new
+    @self_reflection = Self_reflection.new
+      puts @prologue
+      puts @problem_analysis
+      puts @literature_review 
+      puts @acknowledgements
+      puts @references
+      puts @self_reflection
+    end
   end
 
+class Picture
   def preview(picture)
-  end
-end
-
-#look at this!!
-
-class Acknowledgement
-  def puts(acknowledgements, references, output)
-  end
-
-  def hyperlink(click)
+    picture = Picture.new
   end
 end
