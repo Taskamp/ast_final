@@ -1,9 +1,9 @@
 @@layout
-<% title = @title% >
+<% title = @title %>
 <!doctype html>
 <html lang='en'>
 <head>
-  <title> <% title % > </title>
+  <title> <% title %> </title>
 	<meta charset="utf-8">
 	#<link rel="stylesheet" href="styles.css">
 </head>
@@ -24,13 +24,12 @@
 	</header>
 	<section>
 		<%= yield % >
-		<p>Text_one</p>
 	</section>
 </body>
 </html>
 @@home 
-<p> @title 
-Tessa Askamp, studentnumber First supervisor Jan Hein Hoogstad, second reader Esther Peren, word count XXXX, date June 15 2013 </p>
+<p> @title </p>
+<p> @Text_one</p>
 
 @@prologue
 <p>@prologue</p>
