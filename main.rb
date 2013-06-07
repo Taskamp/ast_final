@@ -1,38 +1,49 @@
 require 'sinatra'
 require 'pry'
 require './lib/final_all.rb'
+require 'config.ru'
 
 get '/' do
-  @title = "Serendipitous Encounters"
 	erb :homepage
 end
 
-#explanation of images on page 23
-
-get '/prologue' do
-	@prologue = "prologue"
-	erb :prologue
-#to Jan Hein fyi: the prologue is the story which you have read already
+get '/Onezerozerozero' do
+	@prologue = "Onezerozerozero"
+	erb :Onezerozerozero
+#the introductory story
 end
 
-get '/problem_analysis' do
-	erb :problem_analysis
+get '/Oneonezerozero' do
+	@problem_analysis1 = "Oneonezerozero"
+	erb :Oneonezerozero
 end
 
-get '/acknowledgements' do
-	erb :acknowledgements
+get '/Zerozerozeroone' do
+	@problem_analysis2 = "Zerozerozeroone"
+	erb :Zerozerozeroone
 end
 
-get '/references' do
-	erb :references
+get '/Zerozeroonezero' do
+	@literature_review1 = "Zerozeroonezero"
+	erb :Zerozeroonezero
 end
 
-get '/self_reflection' do
-	erb :self_reflection
+get '/Onezeroonezero' do
+	@literature_review2 = "Onezeroonezero"
+	erb :Onezeroonezero
 end
 
-get 'literature_review' do
-	erb :literature_review
+get '/Zerooneoneone' do
+	@acknowledgements = "Zerooneoneone"
+	erb :Zerooneoneone
 end
 
-#SINATRA P 20, SPECIAL LAY-OUTS, FOR HYPERLINKS????
+get '/Oneoneoneone' do
+	@references = "Oneoneoneone"
+	erb :Oneoneoneone
+end
+
+get '/Zerooneonezero' do
+	@self_reflection = "Zerooneonezero"
+	erb :Zerooneonezero
+end
