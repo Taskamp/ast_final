@@ -1,9 +1,8 @@
-#DESCRIPTION OF HEROKU ON PAGE 78-81
-
 require 'cucumber'
 require 'rspec'
 require 'spec_helper'
 require 'sinatra'
+
 
 class Homepage
   attr_accessor :homepage, :output
@@ -17,22 +16,27 @@ class Homepage
 class Hyperlink
   attr_accessor :prologue, :problem_analysis, :literature_review, :acknowledgements, :references, :self_reflection
   def output(prologue, problem_analysis, literature_review, acknowledgement, references, self_reflection)
-    @prologue = Prologue.new
+    @prologue = Onezerozerozero.new
     #to JH fyi: the prologue is the piece that you already read
-    @problem_analysis = Problem_Analysis.new
+    @problem_analysis1 = Oneonezerozero.new
     #the problem analysis is a story I wrote discussing one of the 'problem statements' of my thesis
-    @literature_review = Literature_Review.new
+    @problem_analysis2 = Zerozerozeroone.new
+    @literature_review1 = Zerozeroonezero.new
     #the literature review discusses literature the story is inspired by
-    @acknowledgements = Acknowledgement.new
-    @references = References.new
-    @self_reflection = Self_reflection.new
-      puts @prologue
-      puts @problem_analysis
-      puts @literature_review 
-      puts @acknowledgements
-      puts @references
-      puts @self_reflection
-    end
+    @literature_review2 = Onezeroonezero.new
+    @acknowledgements = Zerooneoneone.new
+    @references = Oneoneoneone.new
+    @self_reflection = Zerooneonezero.new
+      puts @Onezerozerozero
+      puts @Oneonezerozero
+      puts @Zerozerozeroone
+      puts @Zerozeroonezero
+      puts @Onezeroonezero
+      puts @Zerooneoneone
+      puts @Oneoneoneone
+      puts @Zerooneonezero
+        Output.to_a.shuffle!
+      end
   end
 
 class Picture
