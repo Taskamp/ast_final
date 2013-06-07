@@ -3,48 +3,60 @@
 <!doctype html>
 <html lang='en'>
 <head>
-  <title> <% title %> </title>
+	<link type="text/css" rel="stylesheet.css" href="stylesheet.css"/>
+	<title> <% title %> </title>
 	<meta charset="utf-8">
-	#<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 	<header>
-		<h1></h1>
+		<h1>
+			<title>@title</title>
+			<img src="http://fc07.deviantart.net/fs71/i/2011/161/5/d/mostar__old_bridge_by_citizenfresh-d3iitml.jpg" alt="Mostar">
+		</h1>
 		<nav>
-			<ul>
+			<ul1>
 				<li><a href="/" title="Homepage">Homepage</a></li>
-				<li><a href="/prologue" title="Prologue">Prologue</a></li>
-				<li><a href="/problem_analysis" title="Problem_analysis">Problem_analysis</a></li>
-				<li><a href="/acknowledgements" title="Acknowledgements">Acknowledgements</a></li>
-				<li><a href="/references" title="References">References</a></li>
-				<li><a href="/self_reflection" title="Self_reflection">Self_reflection</a></li>
-				<li><a href="/literature_review" title="Literature_review">Literature_review</a></li>
+				<li><a href="/Onezerozerozero" title="Onezerozerozero">Onezerozerozero</a></li>
+				<li><a href="/Oneonezerozero" title="Oneonezerozero">Oneonezerozero</a></li>
+				<li><a href="/Zerozerozeroone" title="Zerozerozeroone">Zerozerozeroone</a></li>
+				<li><a href="/Zerozeroonezero" title="Zerozeroonezero">Zerozeroonezero</a></li>
+				<li><a href="/Onezeroonezero" title="Onezeroonezero">Onezeroonezero</a></li>
+				<li><a href="/Zerooneoneone" title="Zerooneoneone">Zerooneoneone</a></li>
+				<li><a href="/Oneoneoneone" title="Oneoneoneone">Oneoneoneone</a></li>
+				<li><a href="/Zerooneonezero" title="Zerooneonezero">Zerooneonezero</a></li>			
+				
 			</ul>
 		</nav>
 	</header>
 	<section>
-		<%= yield % >
+		<%= yield % >		
 	</section>
 </body>
 </html>
 @@home 
-<p> @title </p>
-<p> @Text_one</p>
+<p> @title; 
+@Text_one</p>
 
-@@prologue
+@@Onezerozerozero
 <p>@prologue</p>
 
-@@problem_analysis
-<p>story</p>
+@@Oneonezerozero
+<p>story1</p>
 
-@@acknowledgements
+@@Zerozerozeroone
+<p>story2</p>
+
+@@Zerozeroonezero
+<p>blocks of theory - or perhaps I leave them out completely, I have to made up my mind yet</p>
+
+@@Onezeroonezero
+<p>blocks of theory - or perhaps I leave them out completely, I have to made up my mind yet</p>
+
+@@Zerooneoneone
 <p>I would like to thank blabla and bla for making me dinner and supporting me mentally in the past few very tough months</p>
 
-@@references
+@@Oneoneoneone
 <p>all great theorists who helped me to further my thinking about my problems</p>
 
-@@self_reflection
+@@Zerooneonezero
 <p>self reflections and the cultural analyst</p>
-
-@@literature_review
-<p>blocks of theory - or perhaps I leave them out completely, I have to made up my mind yet</p>
