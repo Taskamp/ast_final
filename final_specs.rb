@@ -1,5 +1,6 @@
 require 'rspec'
 require 'spec_helper'
+require 'cucumber'
 
 describe "App" do
   it "presents the thesis" do
@@ -9,7 +10,6 @@ describe "App" do
 end
 
 #FEATURE ONE
-
 describe "Homepage" do 
   it "provides access to the homepage" do
     output.should_receive(:puts).with(Text_one)
@@ -23,8 +23,9 @@ Given(/^a homepage$/) do |homepage|
   homepage.start(output)
 end
 
-Given(/^a photo on the homepage$/) do |homepage|
+Given(/^a picture on the homepage$/) do |homepage|
   homepage = Thesis::Homepage.new(output)
+  #the picture is part of the lay-out, and I will not include it in my algorithm
 end
 
 Given(/^personal information on the homepage$/) do |homepage|
@@ -39,7 +40,6 @@ end
 Then(/^I access the homepage$/) do
   output.messages.should include(Text_one)
 end
-
 
 describe "Prologue" do 
 it "has a hyperlink to the prologue" do
@@ -145,10 +145,6 @@ end
 Then(/^I access the acknowledgements$/) do
   output.messages.should include(acknowledgements)
 end
-
-#Then(/^I can go back to the homepage$/) do
-  #pending # express the regexp above with the code you wish you had
-#end
 
 describe "References" do
   it "should provide a hyperlink from the homepage to references" do
